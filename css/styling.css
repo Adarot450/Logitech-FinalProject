@@ -1,0 +1,31 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+/* nav start  */
+
+.logo-nav{
+    height: 75px;
+} 
+
+
+nav{
+    background-color: #3C64B9;
+}
+
+.navbar-nav li a {
+    color: black;
+    font-weight: 600;
+}
+
+.navbar-nav li a:hover {
+    color: white;
+}
+
+.navbar-expand-lg .navbar-collapse{
+    flex-direction: row-reverse;
+}
+
+/* nav end  */
+
