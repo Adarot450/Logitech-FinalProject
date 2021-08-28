@@ -1,117 +1,139 @@
-*{
-    margin: 0%;
-    padding: 0%;
+* {
+  margin: 0%;
+  padding: 0%;
 }
 
-body{
-    background-color: #3C64B9;
-    font-family: 'Lobster Two', cursive;
+body {
+  background-color: #3c64b9;
+  font-family: "Lobster Two", cursive;
 }
 
 /* nav start  */
 
-.logo-nav{
-    height: 75px;
-} 
+.logo-nav {
+  height: 75px;
+}
 
-
-nav{
-    border-bottom: white 1px solid;
-    font-size: 24px
+nav {
+  border-bottom: white 1px solid;
+  font-size: 24px;
 }
 
 .navbar-nav li a {
-    color: black;
-    font-weight: 600;
+  color: black;
+  font-weight: 600;
 }
 
 .navbar-nav li a:hover {
-    color: white;
+  color: white;
 }
 
-.navbar-expand-lg .navbar-collapse{
-    flex-direction: row-reverse;
+.navbar-expand-lg .navbar-collapse {
+  flex-direction: row-reverse;
 }
 
 /* nav end  */
 
 /* carousel start  */
 
-.carousel{
-    background-color: black;
-    height: 600px;
-    /* margin-top: 100px; */
-    /* padding-bottom: 650px; */
-    border-bottom: white 10px solid;
+.carousel {
+  background-color: black;
+  height: 600px;
+  /* margin-top: 100px; */
+  /* padding-bottom: 650px; */
+  border-bottom: white 10px solid;
 }
 
-.carousel-img{
-    height: 600px;
-    width: 1000px;
+.carousel-img {
+  height: 600px;
+  width: 1000px;
 }
 
 /* carousel end  */
 
 /* SPONSORED TEAMS start  */
 
-.sponsored h1{
-    color: white;
-    padding-left: 25px;
+.sponsored h1 {
+  color: white;
+  padding-left: 25px;
 }
 
-.sponsored-images{
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    padding-right: 25px;
+.sponsored-images {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 25px;
 }
 
-.sponsored{
-    display: flex;
-    align-items: center;
-    border-top: white 1px solid;
-    border-bottom: white 1px solid;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background-color: #525252;
+.sponsored {
+  display: flex;
+  align-items: center;
+  border-top: white 1px solid;
+  border-bottom: white 1px solid;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #525252;
 }
 
 /* SPONSORED TEAMS end  */
 
 /* products start  */
 
-.products h1{
-    color: white;
-    text-align: center;
-    padding-top: 25px;
+.products h1 {
+  color: white;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 15px;
+}
+
+.card,
+.list-group-item {
+  background-color: #567ac8;
+  border: 1px solid white;
+  margin-bottom: 25px;
+}
+
+.products-cards {
+  display: grid;
+  grid-template-columns: 40% 40% 40%;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 18em;
+}
+
+.card img {
+  padding-top: 10px;
 }
 
 /* products end  */
 
-@media (max-width: 735px){
+@media (max-width: 735px) {
+  .sponsored-images {
+    justify-content: center;
+  }
 
-    .sponsored-images{
-        /* flex-direction: column; */
-        justify-content: center;
-    }
+  .sponsored-image {
+    height: 100px;
+    width: 100px;
+  }
 
-    .sponsored-image{
-        height: 100px;
-        width: 100px;
-    }
-    
-    .sponsored{
-        display: block;
-    }
+  .sponsored {
+    display: block;
+  }
 
-    .sponsored h1{
-        text-align: center;
-    }
-
+  .sponsored h1 {
+    text-align: center;
+  }
 }
-@media (max-width: 370px){
-    .sponsored-image{
-        height: 85px;
-        width: 85px;
-    }
+@media (max-width: 370px) {
+  .sponsored-image {
+    height: 85px;
+    width: 85px;
+  }
 }
