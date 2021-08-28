@@ -5,6 +5,7 @@
 
 body{
     background-color: #3C64B9;
+    font-family: 'Lobster Two', cursive;
 }
 
 /* nav start  */
@@ -15,8 +16,8 @@ body{
 
 
 nav{
-    background-color: #3C64B9;
     border-bottom: white 1px solid;
+    font-size: 24px
 }
 
 .navbar-nav li a {
@@ -55,12 +56,14 @@ nav{
 
 .sponsored h1{
     color: white;
+    padding-left: 25px;
 }
 
 .sponsored-images{
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    padding-right: 25px;
 }
 
 .sponsored{
@@ -77,6 +80,11 @@ nav{
 
 /* products start  */
 
+.products h1{
+    color: white;
+    text-align: center;
+    padding-top: 25px;
+}
 
 /* products end  */
 
