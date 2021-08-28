@@ -5,7 +5,7 @@ const popularProducts = [
       "The G513 is a mechanical RGB keyboared with 12 programable keys",
     Rating: "Rating:9.1/10",
     Price: "Price:130$-150$",
-    img: "ress/G513.webp",
+    img: "ress/g513.webp",
   },
   {
     name: "G613",
@@ -29,7 +29,7 @@ const popularProducts = [
       "The G502 is a RGB wireless mouse with many programable buttons.",
     Rating: "Rating:7.8/10",
     Price: "Price:150$",
-    img: "ress/G502.webp",
+    img: "ress/g502.webp",
   },
   {
     name: "G903",
