@@ -73,6 +73,10 @@ nav {
   padding-bottom: 50px;
 }
 
+.sponsored-image {
+  margin-left: 20px;
+}
+
 footer {
   background-color: #525252;
   height: 100%;
@@ -144,6 +148,9 @@ footer h6 {
   .card {
     width: 13em;
   }
+  .sponsored-image {
+    margin-left: 8px;
+  }
 }
 
 @media (max-width: 425px) {
@@ -164,7 +171,7 @@ footer h6 {
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 385px) {
   .products-cards {
     grid-template-columns: 36% 36% 36%;
   }
@@ -179,6 +186,11 @@ footer h6 {
   }
   .list-group {
     font-size: xx-small;
+  }
+  .sponsored-image {
+    margin-left: 2px;
+    height: 10px;
+    width: 10px;
   }
 }
 
