@@ -39,8 +39,6 @@ nav {
 .carousel {
   background-color: black;
   height: 600px;
-  /* margin-top: 100px; */
-  /* padding-bottom: 650px; */
   border-bottom: white 10px solid;
 }
 
@@ -135,6 +133,44 @@ footer h6 {
 
 /* products end  */
 
+/* per product start  */
+
+.product-div {
+  width: 50%;
+}
+
+.product-img {
+  width: 90%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.product {
+  display: flex;
+}
+
+.product-info {
+  text-align: center;
+  width: 50%;
+  margin-right: 10px;
+}
+
+.product-desc {
+  margin-top: 20px;
+  padding-bottom: 15px;
+}
+
+.product-title {
+  margin-top: 15px;
+}
+
+.Checkout {
+  margin-top: 25px;
+}
+
+/* per product end  */
+
 @media (max-width: 1024px) {
   .products-cards {
     grid-template-columns: 35% 35% 35%;
@@ -168,6 +204,15 @@ footer h6 {
   }
   .list-group {
     font-size: xx-small;
+  }
+  .xs {
+    font-size: x-small;
+  }
+  .product-desc {
+    font-size: small;
+  }
+  .product-title {
+    font-size: medium;
   }
 }
 

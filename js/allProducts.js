@@ -4,7 +4,7 @@ const allProducts = [
     description:
       "The G513 is a mechanical RGB keyboared with 12 programable keys",
     Rating: "Rating:9.1/10",
-    Price: "Price:130$-150$",
+    Price: "Price:130$",
     img: "../ress/g513.webp",
   },
   {
@@ -110,5 +110,57 @@ if (url.includes("/HTML/AllProducts.html")) {
 } else {
   console.log(product);
   const productDiv = document.querySelector(".product");
-  productDiv.innerHTML = productIndex;
+  const perProductDiv = document.createElement("div");
+  perProductDiv.classList.add("product-div");
+  const perProductImg = document.createElement("img");
+  perProductImg.classList.add("product-img");
+  perProductImg.src = product.img;
+  const InfoDiv = document.createElement("div");
+  InfoDiv.classList.add("product-info");
+  const ProductTitle = document.createElement("h1");
+  ProductTitle.classList.add("product-title");
+  ProductTitle.innerHTML = product.name;
+  const productDesc = document.createElement("h3");
+  productDesc.classList.add("product-desc");
+  productDesc.innerHTML = product.description;
+  const productRating = document.createElement("h3");
+  productRating.innerHTML = product.Rating;
+  productRating.classList.add("xs");
+  const productPrice = document.createElement("h3");
+  productPrice.classList.add("xs");
+  productPrice.innerHTML = product.Price;
+  const buttonDiv = document.createElement("div");
+  buttonDiv.classList.add("button");
+  const button = document.createElement("a");
+  button.classList.add("btn");
+  button.classList.add("btn-light");
+  button.classList.add("checkout");
+  button.href = "cart.html";
+  // button.role = "button";
+  button.setAttribute("role", "button");
+  button.innerHTML = "CheckOut";
+
+  productDiv.appendChild(perProductDiv);
+  perProductDiv.appendChild(perProductImg);
+  productDiv.appendChild(InfoDiv);
+  InfoDiv.appendChild(ProductTitle);
+  InfoDiv.appendChild(productDesc);
+  InfoDiv.appendChild(productRating);
+  InfoDiv.appendChild(productPrice);
+  InfoDiv.appendChild(buttonDiv);
+  buttonDiv.appendChild(button);
+  button.appendChild(checkout);
 }
+// {
+/* <div class="product-info">
+  <h1 class="product-title">G513</h1>
+  <h3 class="product-desc">
+    The G513 is a mechanical RGB keyboared with 12 programable keys
+  </h3>
+  <h4>Rating:9.1/10</h4>
+  <h4>Price 130$</h4>
+  <div class="button">
+      <a class="btn btn-light Checkout" href="" role="button"> Check Out </a>
+    </div>
+</div>; */
+// }

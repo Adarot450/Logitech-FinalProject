@@ -5,7 +5,7 @@ const popularProducts = [
       "The G513 is a mechanical RGB keyboared with 12 programable keys",
     Rating: "Rating:9.1/10",
     Price: "Price:130$-150$",
-    img: "ress/g513.webp",
+    img: "../ress/g513.webp",
   },
   {
     name: "G613",
@@ -13,7 +13,7 @@ const popularProducts = [
       "The G513 is a mechanical RGB keyboared with 12 programable keys",
     Rating: "Rating:7.5/10",
     Price: "Price:150$",
-    img: "ress/g613.webp",
+    img: "../ress/g613.webp",
   },
   {
     name: "G903",
@@ -21,7 +21,7 @@ const popularProducts = [
       "The G903 is a RGB wireless mouse with 6 programable buttons and with upto 140 hours of lifetime from one charge.",
     Rating: "Rating:8/10",
     Price: "Price:130$",
-    img: "ress/g903.webp",
+    img: "../ress/g903.webp",
   },
   {
     name: "G502",
@@ -29,55 +29,86 @@ const popularProducts = [
       "The G502 is a RGB wireless mouse with many programable buttons.",
     Rating: "Rating:7.8/10",
     Price: "Price:150$",
-    img: "ress/g502.webp",
+    img: "../ress/g502.webp",
   },
   {
     name: "G903",
     description: "The G903 is a Gaming headset with Spacial ingame awarness.",
     Rating: "Rating:8/10",
     Price: "Price:130$",
-    img: "ress/ProX.webp",
+    img: "../ress/ProX.webp",
   },
   {
     name: "C922",
     description: "The C922 is a streaming camera with 1080p video recording.",
     Rating: "Rating:9.2/10",
     Price: "Price:100$",
-    img: "ress/C922.webp",
+    img: "../ress/C922.webp",
+  },
+  {
+    name: "G840",
+    description: "The G840 is a gaming mouse pad collaberation with Shroud.",
+    Rating: "Rating:9/10",
+    Price: "Price:50$",
+    img: "../ress/shroud-Pad.webp",
+  },
+  {
+    name: "G840 K/DA",
+    description:
+      "The G840 K/DA is a gaming mouse pad collaberation with League Of Legends.",
+    Rating: "Rating:9.4/10",
+    Price: "Price:50$",
+    img: "../ress/G840-K-DA.webp",
   },
 ];
 
 const cardContainer = document.querySelector(".products-cards");
+console.log(window.location.href);
+const url = window.location.href;
 
-for (var i = 0; i < popularProducts.length; i++) {
-  const cardDiv = document.createElement("div");
-  cardDiv.classList.add("card");
-  var img = document.createElement("img");
-  img.src = popularProducts[i].img;
-  const cardBodyDiv = document.createElement("div");
-  cardBodyDiv.classList.add("card-body");
-  const cardTitle = document.createElement("h5");
-  cardTitle.classList.add("card-title");
-  cardTitle.innerHTML = popularProducts[i].name;
-  const cardText = document.createElement("p");
-  cardText.classList.add("card-text");
-  cardText.innerHTML = popularProducts[i].description;
-  const listGroup = document.createElement("ul");
-  listGroup.classList.add("list-group");
-  listGroup.classList.add("list-group-flush");
-  const Rating = document.createElement("li");
-  Rating.classList.add("list-group-item");
-  Rating.innerHTML = popularProducts[i].Rating;
-  const Price = document.createElement("li");
-  Price.classList.add("list-group-item");
-  Price.innerHTML = popularProducts[i].Price;
+let productIndex = -100;
 
-  cardDiv.appendChild(img);
-  cardDiv.appendChild(cardBodyDiv);
-  cardBodyDiv.appendChild(cardTitle);
-  cardBodyDiv.appendChild(cardText);
-  cardDiv.appendChild(listGroup);
-  listGroup.appendChild(Rating);
-  listGroup.appendChild(Price);
-  cardContainer.appendChild(cardDiv);
+if (url.includes("index.html")) {
+  popularProducts.forEach((element, index) => {
+    productIndex = index;
+    const cardDiv = document.createElement("div");
+    cardDiv.classList.add("card");
+    var img = document.createElement("img");
+    img.src = element.img;
+    const cardBodyDiv = document.createElement("div");
+    cardBodyDiv.classList.add("card-body");
+    const cardTitle = document.createElement("h5");
+    cardTitle.classList.add("card-title");
+    cardTitle.innerHTML = element.name;
+    const cardText = document.createElement("p");
+    cardText.classList.add("card-text");
+    cardText.innerHTML = element.description;
+    const listGroup = document.createElement("ul");
+    listGroup.classList.add("list-group");
+    listGroup.classList.add("list-group-flush");
+    const Rating = document.createElement("li");
+    Rating.classList.add("list-group-item");
+    Rating.innerHTML = element.Rating;
+    const Price = document.createElement("li");
+    Price.classList.add("list-group-item");
+    Price.innerHTML = element.Price;
+
+    cardContainer.appendChild(cardDiv);
+    cardDiv.appendChild(img);
+    cardDiv.appendChild(cardBodyDiv);
+    cardBodyDiv.appendChild(cardTitle);
+    cardBodyDiv.appendChild(cardText);
+    cardDiv.appendChild(listGroup);
+    listGroup.appendChild(Rating);
+    listGroup.appendChild(Price);
+
+    cardDiv.addEventListener("click", () => {
+      var newin = window.open("/HTML/productPage.html");
+      newin.product = element;
+    });
+  });
+} else {
+  console.log(product);
+  const productDiv = document.querySelector(".product");
+  productDiv.innerHTML = productIndex;
 }
