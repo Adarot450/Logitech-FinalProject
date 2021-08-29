@@ -48,45 +48,46 @@ const allProducts = [
   {
     name: "G840",
     description: "The G840 is a gaming mouse pad collaberation with Shroud.",
-    Rating: "Rating:9.2/10",
-    Price: "Price:100$",
+    Rating: "Rating:9/10",
+    Price: "Price:50$",
     img: "../ress/shroud-Pad.webp",
   },
   {
     name: "G840 K/DA",
     description:
       "The G840 K/DA is a gaming mouse pad collaberation with League Of Legends.",
-    Rating: "Rating:9.2/10",
-    Price: "Price:100$",
+    Rating: "Rating:9.4/10",
+    Price: "Price:50$",
     img: "../ress/G840-K-DA.webp",
   },
 ];
 
 const cardContainer = document.querySelector(".products-cards");
 
-for (var i = 0; i < allProducts.length; i++) {
+allProducts.forEach((element, index) => {
   const cardDiv = document.createElement("div");
   cardDiv.classList.add("card");
   var img = document.createElement("img");
-  img.src = allProducts[i].img;
+  img.src = element.img;
   const cardBodyDiv = document.createElement("div");
   cardBodyDiv.classList.add("card-body");
   const cardTitle = document.createElement("h5");
   cardTitle.classList.add("card-title");
-  cardTitle.innerHTML = allProducts[i].name;
+  cardTitle.innerHTML = element.name;
   const cardText = document.createElement("p");
   cardText.classList.add("card-text");
-  cardText.innerHTML = allProducts[i].description;
+  cardText.innerHTML = element.description;
   const listGroup = document.createElement("ul");
   listGroup.classList.add("list-group");
   listGroup.classList.add("list-group-flush");
   const Rating = document.createElement("li");
   Rating.classList.add("list-group-item");
-  Rating.innerHTML = allProducts[i].Rating;
+  Rating.innerHTML = element.Rating;
   const Price = document.createElement("li");
   Price.classList.add("list-group-item");
-  Price.innerHTML = allProducts[i].Price;
+  Price.innerHTML = element.Price;
 
+  cardContainer.appendChild(cardDiv);
   cardDiv.appendChild(img);
   cardDiv.appendChild(cardBodyDiv);
   cardBodyDiv.appendChild(cardTitle);
@@ -94,5 +95,13 @@ for (var i = 0; i < allProducts.length; i++) {
   cardDiv.appendChild(listGroup);
   listGroup.appendChild(Rating);
   listGroup.appendChild(Price);
-  cardContainer.appendChild(cardDiv);
-}
+
+  cardDiv.addEventListener("click", () => {
+    ""``;
+    window.location.href = `/product/${index}`;
+    console.log(index);
+  });
+});
+
+const firstName = "Ahmed";
+const lastName = "Ramy";
