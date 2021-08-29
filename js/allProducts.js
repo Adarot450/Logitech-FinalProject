@@ -63,45 +63,52 @@ const allProducts = [
 ];
 
 const cardContainer = document.querySelector(".products-cards");
+console.log(window.location.href);
+const url = window.location.href;
 
-allProducts.forEach((element, index) => {
-  const cardDiv = document.createElement("div");
-  cardDiv.classList.add("card");
-  var img = document.createElement("img");
-  img.src = element.img;
-  const cardBodyDiv = document.createElement("div");
-  cardBodyDiv.classList.add("card-body");
-  const cardTitle = document.createElement("h5");
-  cardTitle.classList.add("card-title");
-  cardTitle.innerHTML = element.name;
-  const cardText = document.createElement("p");
-  cardText.classList.add("card-text");
-  cardText.innerHTML = element.description;
-  const listGroup = document.createElement("ul");
-  listGroup.classList.add("list-group");
-  listGroup.classList.add("list-group-flush");
-  const Rating = document.createElement("li");
-  Rating.classList.add("list-group-item");
-  Rating.innerHTML = element.Rating;
-  const Price = document.createElement("li");
-  Price.classList.add("list-group-item");
-  Price.innerHTML = element.Price;
+let productIndex = -100;
 
-  cardContainer.appendChild(cardDiv);
-  cardDiv.appendChild(img);
-  cardDiv.appendChild(cardBodyDiv);
-  cardBodyDiv.appendChild(cardTitle);
-  cardBodyDiv.appendChild(cardText);
-  cardDiv.appendChild(listGroup);
-  listGroup.appendChild(Rating);
-  listGroup.appendChild(Price);
+if (url.includes("/HTML/AllProducts.html")) {
+  allProducts.forEach((element, index) => {
+    productIndex = index;
+    const cardDiv = document.createElement("div");
+    cardDiv.classList.add("card");
+    var img = document.createElement("img");
+    img.src = element.img;
+    const cardBodyDiv = document.createElement("div");
+    cardBodyDiv.classList.add("card-body");
+    const cardTitle = document.createElement("h5");
+    cardTitle.classList.add("card-title");
+    cardTitle.innerHTML = element.name;
+    const cardText = document.createElement("p");
+    cardText.classList.add("card-text");
+    cardText.innerHTML = element.description;
+    const listGroup = document.createElement("ul");
+    listGroup.classList.add("list-group");
+    listGroup.classList.add("list-group-flush");
+    const Rating = document.createElement("li");
+    Rating.classList.add("list-group-item");
+    Rating.innerHTML = element.Rating;
+    const Price = document.createElement("li");
+    Price.classList.add("list-group-item");
+    Price.innerHTML = element.Price;
 
-  cardDiv.addEventListener("click", () => {
-    ""``;
-    window.location.href = `/product/${index}`;
-    console.log(index);
+    cardContainer.appendChild(cardDiv);
+    cardDiv.appendChild(img);
+    cardDiv.appendChild(cardBodyDiv);
+    cardBodyDiv.appendChild(cardTitle);
+    cardBodyDiv.appendChild(cardText);
+    cardDiv.appendChild(listGroup);
+    listGroup.appendChild(Rating);
+    listGroup.appendChild(Price);
+
+    cardDiv.addEventListener("click", () => {
+      var newin = window.open("/HTML/productPage.html");
+      newin.product = element;
+    });
   });
-});
-
-const firstName = "Ahmed";
-const lastName = "Ramy";
+} else {
+  console.log(product);
+  const productDiv = document.querySelector(".product");
+  productDiv.innerHTML = productIndex;
+}
