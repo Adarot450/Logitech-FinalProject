@@ -45,21 +45,6 @@ const popularProducts = [
     Price: "Price:100$",
     img: "ress/C922.webp",
   },
-  {
-    name: "G840",
-    description: "The G840 is a gaming mouse pad collaberation with Shroud.",
-    Rating: "Rating:9/10",
-    Price: "Price:50$",
-    img: "ress/shroud-Pad.webp",
-  },
-  {
-    name: "G840 K/DA",
-    description:
-      "The G840 K/DA is a gaming mouse pad collaberation with League Of Legends.",
-    Rating: "Rating:9.4/10",
-    Price: "Price:50$",
-    img: "ress/G840-K-DA.webp",
-  },
 ];
 
 const cardContainer = document.querySelector(".products-cards");
@@ -68,7 +53,7 @@ const url = window.location.href;
 
 let productIndex = -100;
 
-if (url.includes("index.html")) {
+if (url.includes("/index.html")) {
   popularProducts.forEach((element, index) => {
     productIndex = index;
     const cardDiv = document.createElement("div");
@@ -103,7 +88,7 @@ if (url.includes("index.html")) {
     listGroup.appendChild(Price);
 
     cardDiv.addEventListener("click", () => {
-      var newin = window.open("/HTML/productPage.html");
+      var newin = window.open("/productPage.html");
       newin.product = element;
     });
   });
