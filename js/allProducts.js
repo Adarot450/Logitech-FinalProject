@@ -136,7 +136,6 @@ if (url.includes("/AllProducts.html")) {
   button.classList.add("btn-light");
   button.classList.add("checkout");
   button.href = "cart.html";
-  // button.role = "button";
   button.setAttribute("role", "button");
   button.innerHTML = "CheckOut";
 
@@ -151,16 +150,3 @@ if (url.includes("/AllProducts.html")) {
   buttonDiv.appendChild(button);
   button.appendChild(checkout);
 }
-// {
-/* <div class="product-info">
-  <h1 class="product-title">G513</h1>
-  <h3 class="product-desc">
-    The G513 is a mechanical RGB keyboared with 12 programable keys
-  </h3>
-  <h4>Rating:9.1/10</h4>
-  <h4>Price 130$</h4>
-  <div class="button">
-      <a class="btn btn-light Checkout" href="" role="button"> Check Out </a>
-    </div>
-</div>; */
-// }
