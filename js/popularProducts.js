@@ -59,7 +59,7 @@ const url = window.location.href;
 
 let productIndex = -100;
 
-if (url.includes("/")) {
+if (url.includes("")) {
   popularProducts.forEach((element, index) => {
     productIndex = index;
     const cardDiv = document.createElement("div");
