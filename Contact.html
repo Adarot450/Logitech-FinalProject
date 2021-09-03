@@ -63,8 +63,7 @@
     </nav>
     <!-- nav end  -->
 
-    <div id="error"></div>
-    <form id="form" method="GET">
+    <!-- <form id="form" method="GET">
       <div>
         <label for="Name">Name</label>
         <input type="text" name="name" id="Name" required />
@@ -82,6 +81,71 @@
           rows="10"
           required
         ></textarea>
+      </div>
+      <div>
+        <button type="submit">Sumbmit</button>
+      </div>
+    </form> -->
+
+    <form id="form" method="GET">
+      <div class="row g-3 align-items-center">
+        <div class="col-auto">
+          <label for="Name" class="col-form-label">Name</label>
+        </div>
+        <div class="col-auto">
+          <input
+            type="text"
+            id="Name"
+            class="form-control Name"
+            aria-describedby="passwordHelpInline"
+            required
+          />
+        </div>
+        <div class="col-auto">
+          <span id="passwordHelpInline" class="form-text">
+            Must be 3-10 characters long.
+          </span>
+        </div>
+      </div>
+      <div class="row g-3 align-items-center">
+        <div class="col-auto">
+          <label for="email" class="col-form-label">Email</label>
+        </div>
+        <div class="col-auto">
+          <input
+            type="email"
+            id="email"
+            class="form-control Name"
+            aria-describedby="passwordHelpInline"
+            required
+          />
+        </div>
+        <div class="col-auto">
+          <span id="passwordHelpInline" class="form-text">
+            Must be 3-30 characters long.
+          </span>
+        </div>
+      </div>
+      <div class="row g-3 align-items-center">
+        <div class="col-auto">
+          <label for="message" class="col-form-label">message</label>
+        </div>
+        <div class="col-auto">
+          <textarea
+            name="message"
+            id="textarea"
+            cols="30"
+            rows="10"
+            class="form-control Name"
+            aria-describedby="passwordHelpInline"
+            required
+          ></textarea>
+        </div>
+        <div class="col-auto">
+          <span id="passwordHelpInline" class="form-text">
+            Must be less than 300 characters long.
+          </span>
+        </div>
       </div>
       <div>
         <button type="submit">Sumbmit</button>

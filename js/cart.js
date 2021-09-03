@@ -4,9 +4,11 @@ var TotalHTML = document.getElementById("Total").innerHTML;
 var totalNumber = parseInt(TotalHTML, 10);
 
 function UP() {
-  quantityNumber++;
-  document.getElementById("quantaty").innerHTML = quantityNumber;
-  total();
+  if (quantityNumber < 5) {
+    quantityNumber++;
+    document.getElementById("quantaty").innerHTML = quantityNumber;
+    total();
+  }
 }
 function Down() {
   if (quantityNumber > 0) {
