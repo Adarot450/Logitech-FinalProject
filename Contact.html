@@ -22,7 +22,6 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="css/styling.css" />
     <link rel="icon" href="ress/logo.png" type="image/x-icon" />
     <title>Logitech</title>
@@ -68,18 +67,30 @@
     </nav>
     <!-- nav end  -->
 
-    <!-- allProducts start  -->
-
-    <div class="products">
-      <h1>All products</h1>
-      <div class="center">
-        <div class="products-cards"></div>
+    <div id="error"></div>
+    <form id="form" method="GET">
+      <div>
+        <label for="Name">Name</label>
+        <input type="text" name="name" id="Name" required />
       </div>
-    </div>
-
-    <!-- allProducts end -->
-
-    <!-- footer start  -->
+      <div>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required />
+      </div>
+      <div class="message">
+        <label for="message">type your message</label>
+        <textarea
+          name="message"
+          id="textarea"
+          cols="30"
+          rows="10"
+          required
+        ></textarea>
+      </div>
+      <div>
+        <button type="submit">Sumbmit</button>
+      </div>
+    </form>
 
     <footer>
       <!-- SPONSORED TEAMS start   -->
@@ -97,15 +108,12 @@
       <h6 class="rights">© 2021 Logitech. All rights reserved</h6>
     </footer>
 
-    <!-- footer end  -->
-
-    <!-- scrips -->
+    <!-- script  -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
       crossorigin="anonymous"
     ></script>
-    <script src="js/allProducts.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/Contact.js"></script>
   </body>
 </html>

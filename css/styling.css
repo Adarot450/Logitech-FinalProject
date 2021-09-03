@@ -5,7 +5,7 @@
 
 body {
   background-color: #3c64b9;
-  font-family: "Lobster Two", cursive;
+  font-family: "Roboto", sans-serif;
 }
 
 /* nav start  */
@@ -178,6 +178,25 @@ footer h6 {
 }
 
 /* per product end  */
+
+/* form start  */
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.message {
+  display: flex;
+}
+
+#error {
+  text-align: center;
+  color: red;
+}
+
+/* form end  */
 
 @media (max-width: 1024px) {
   .products-cards {
