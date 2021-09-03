@@ -8,6 +8,8 @@ function UP() {
     quantityNumber++;
     document.getElementById("quantaty").innerHTML = quantityNumber;
     total();
+  } else {
+    ("you cant buy more than 5 of the same product");
   }
 }
 function Down() {
@@ -15,6 +17,8 @@ function Down() {
     quantityNumber--;
     document.getElementById("quantaty").innerHTML = quantityNumber;
     total();
+  } else {
+    ("you cant buy less than 0 products");
   }
 }
 function total() {
