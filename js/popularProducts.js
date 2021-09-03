@@ -94,7 +94,7 @@ if (url.includes("")) {
     listGroup.appendChild(Price);
 
     cardDiv.addEventListener("click", () => {
-      var newin = window.open("/productPage.html");
+      var newin = window.open("../productPage.html");
       newin.product = element;
     });
   });
