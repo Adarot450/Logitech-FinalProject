@@ -198,6 +198,31 @@ form {
 
 /* form end  */
 
+/* cart start  */
+
+.product-cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cart-table {
+  margin: 30px;
+  border: black solid 1px;
+}
+
+td,
+th {
+  padding: 15px;
+  border: 1px solid black;
+}
+
+.Total-Div {
+  display: flex;
+}
+
+/* cart end  */
+
 @media (max-width: 1024px) {
   .products-cards {
     grid-template-columns: 35% 35% 35%;
@@ -213,6 +238,7 @@ form {
   }
   .sponsored-image {
     margin-left: 8px;
+    height: 100px;
   }
 }
 

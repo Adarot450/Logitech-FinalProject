@@ -4,7 +4,8 @@ const popularProducts = [
     description:
       "The G513 is a mechanical RGB keyboared with 12 programable keys",
     Rating: "Rating:9.1/10",
-    Price: "Price:130$-150$",
+    Price: "Price:130$",
+    PriceInNo: "130",
     img: "ress/g513.webp",
   },
   {
@@ -12,6 +13,7 @@ const popularProducts = [
     description:
       "The G513 is a mechanical RGB keyboared with 12 programable keys",
     Rating: "Rating:7.5/10",
+    PriceInNo: "150",
     Price: "Price:150$",
     img: "ress/g613.webp",
   },
@@ -21,6 +23,7 @@ const popularProducts = [
       "The G903 is a RGB wireless mouse with 6 programable buttons and with upto 140 hours of lifetime from one charge.",
     Rating: "Rating:8/10",
     Price: "Price:130$",
+    PriceInNo: "130",
     img: "ress/g903.webp",
   },
   {
@@ -29,12 +32,14 @@ const popularProducts = [
       "The G502 is a RGB wireless mouse with many programable buttons.",
     Rating: "Rating:7.8/10",
     Price: "Price:150$",
+    PriceInNo: "150",
     img: "ress/g502.webp",
   },
   {
     name: "G903",
     description: "The G903 is a Gaming headset with Spacial ingame awarness.",
     Rating: "Rating:8/10",
+    PriceInNo: "130",
     Price: "Price:130$",
     img: "ress/ProX.webp",
   },
@@ -43,6 +48,7 @@ const popularProducts = [
     description: "The C922 is a streaming camera with 1080p video recording.",
     Rating: "Rating:9.2/10",
     Price: "Price:100$",
+    PriceInNo: "100",
     img: "ress/C922.webp",
   },
 ];
@@ -53,7 +59,7 @@ const url = window.location.href;
 
 let productIndex = -100;
 
-if (url.includes("/index.html")) {
+if (url.includes("/")) {
   popularProducts.forEach((element, index) => {
     productIndex = index;
     const cardDiv = document.createElement("div");

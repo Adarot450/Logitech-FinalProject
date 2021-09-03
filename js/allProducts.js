@@ -5,6 +5,7 @@ const allProducts = [
       "The G513 is a mechanical RGB keyboared with 12 programable keys",
     Rating: "Rating:9.1/10",
     Price: "Price:130$",
+    PriceInNo: "130",
     img: "ress/g513.webp",
   },
   {
@@ -12,6 +13,7 @@ const allProducts = [
     description:
       "The G513 is a mechanical RGB keyboared with 12 programable keys",
     Rating: "Rating:7.5/10",
+    PriceInNo: "150",
     Price: "Price:150$",
     img: "ress/g613.webp",
   },
@@ -21,6 +23,7 @@ const allProducts = [
       "The G903 is a RGB wireless mouse with 6 programable buttons and with upto 140 hours of lifetime from one charge.",
     Rating: "Rating:8/10",
     Price: "Price:130$",
+    PriceInNo: "130",
     img: "ress/g903.webp",
   },
   {
@@ -29,12 +32,14 @@ const allProducts = [
       "The G502 is a RGB wireless mouse with many programable buttons.",
     Rating: "Rating:7.8/10",
     Price: "Price:150$",
+    PriceInNo: "150",
     img: "ress/g502.webp",
   },
   {
     name: "G903",
     description: "The G903 is a Gaming headset with Spacial ingame awarness.",
     Rating: "Rating:8/10",
+    PriceInNo: "130",
     Price: "Price:130$",
     img: "ress/ProX.webp",
   },
@@ -43,6 +48,7 @@ const allProducts = [
     description: "The C922 is a streaming camera with 1080p video recording.",
     Rating: "Rating:9.2/10",
     Price: "Price:100$",
+    PriceInNo: "100",
     img: "ress/C922.webp",
   },
   {
@@ -50,6 +56,7 @@ const allProducts = [
     description: "The G840 is a gaming mouse pad collaberation with Shroud.",
     Rating: "Rating:9/10",
     Price: "Price:50$",
+    PriceInNo: "50",
     img: "ress/shroud-Pad.webp",
   },
   {
@@ -58,6 +65,7 @@ const allProducts = [
       "The G840 K/DA is a gaming mouse pad collaberation with League Of Legends.",
     Rating: "Rating:9.4/10",
     Price: "Price:50$",
+    PriceInNo: "50",
     img: "ress/G840-K-DA.webp",
   },
 ];
@@ -137,7 +145,7 @@ if (url.includes("/AllProducts.html")) {
   button.classList.add("checkout");
   button.href = "cart.html";
   button.setAttribute("role", "button");
-  button.innerHTML = "CheckOut";
+  button.innerHTML = "Add To Cart";
 
   productDiv.appendChild(perProductDiv);
   perProductDiv.appendChild(perProductImg);
@@ -148,5 +156,4 @@ if (url.includes("/AllProducts.html")) {
   InfoDiv.appendChild(productPrice);
   InfoDiv.appendChild(buttonDiv);
   buttonDiv.appendChild(button);
-  button.appendChild(checkout);
 }
