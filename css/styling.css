@@ -190,11 +190,16 @@ form {
 
 .col-form-label {
   color: white;
+  /* margin: 15px; */
+}
+
+.form-control {
   margin: 15px;
 }
 
-#passwordHelpInline {
+.form-text {
   color: white;
+  margin-left: 10px;
 }
 
 /* form end  */

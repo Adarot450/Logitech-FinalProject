@@ -9,7 +9,7 @@ function UP() {
     document.getElementById("quantaty").innerHTML = quantityNumber;
     total();
   } else {
-    ("you cant buy more than 5 of the same product");
+    alert("you cant buy more than 5 of the same product");
   }
 }
 function Down() {
@@ -18,7 +18,7 @@ function Down() {
     document.getElementById("quantaty").innerHTML = quantityNumber;
     total();
   } else {
-    ("you cant buy less than 0 products");
+    alert("you cant buy less than 0 products");
   }
 }
 function total() {
