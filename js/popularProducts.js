@@ -64,6 +64,9 @@ if (url.includes("")) {
     productIndex = index;
     const cardDiv = document.createElement("div");
     cardDiv.classList.add("card");
+    cardDiv.classList.add("wow");
+    cardDiv.classList.add("animate__animated");
+    cardDiv.classList.add("animate__backInLeft");
     var img = document.createElement("img");
     img.src = element.img;
     const cardBodyDiv = document.createElement("div");
