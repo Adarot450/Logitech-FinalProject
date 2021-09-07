@@ -5,16 +5,20 @@ var error = document.getElementById("error");
 var textarea = document.getElementById("textarea");
 
 form.addEventListener("submit", (e) => {
-  if (Name.value.length >= 10) {
+  var emailValue = email.value;
+  if (Name.value.length >= 11) {
     alert("Name must be smaller than 10 charecters");
     e.preventDefault();
-  }
-  if (Name.value.length <= 3) {
-    alert("Name must be larger than 3 charecters");
+  } else if (Name.value.length <= 2) {
+    alert("Name must be larger than or equal to 3 charecters");
     e.preventDefault();
-  }
-
-  if (textarea.value.length >= 300) {
+  } else if (emailValue.includes("@") == false) {
+    alert("Email is incorrect");
+    e.preventDefault();
+  } else if (emailValue.includes(".com") == false) {
+    alert("Email is incorrect");
+    e.preventDefault();
+  } else if (textarea.value.length >= 300) {
     alert("Text must be smaller than 300 charecters");
     e.preventDefault();
   }
