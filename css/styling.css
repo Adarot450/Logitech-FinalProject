@@ -5,6 +5,7 @@
 
 body {
   background-color: #3c64b9;
+  color: white;
   font-family: "Roboto", sans-serif;
 }
 
@@ -30,6 +31,10 @@ nav {
 
 .navbar-expand-lg .navbar-collapse {
   flex-direction: row-reverse;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: white;
 }
 
 /* nav end  */
@@ -134,6 +139,10 @@ footer h6 {
 
 .products {
   border-top: 1px solid white;
+}
+
+.list-group-item {
+  color: white;
 }
 
 /* products end  */
