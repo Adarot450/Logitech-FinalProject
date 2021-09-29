@@ -126,6 +126,7 @@ footer h6 {
 
 .card {
   width: 18em;
+  cursor: pointer;
 }
 
 .card img {
