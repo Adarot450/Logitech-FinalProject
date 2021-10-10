@@ -6,7 +6,7 @@
 body {
   background-color: #3c64b9;
   color: white;
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat Alternates", sans-serif;
 }
 
 /* nav start  */
@@ -94,6 +94,7 @@ footer h6 {
 .rights {
   padding-bottom: 15px;
   padding-left: 15px;
+  text-align: center;
 }
 
 /* footer end  */
@@ -115,6 +116,7 @@ footer h6 {
 }
 
 .products-cards {
+  margin-right: 5.8%;
   display: grid;
   grid-template-columns: 40% 40% 40%;
 }
@@ -130,7 +132,7 @@ footer h6 {
 }
 
 .card img {
-  padding: 10px;
+  padding: 15px;
 }
 
 .btn-light {
@@ -200,7 +202,6 @@ form {
 
 .col-form-label {
   color: white;
-  /* margin: 15px; */
 }
 
 .form-control {
@@ -210,6 +211,14 @@ form {
 .form-text {
   color: white;
   margin-left: 10px;
+}
+
+.message {
+  margin-right: 30px;
+}
+
+.Submit {
+  margin-right: 130px;
 }
 
 /* form end  */
@@ -230,7 +239,7 @@ form {
 td,
 th {
   padding: 15px;
-  border: 1px solid black;
+  border: 1px solid white;
 }
 
 .Total-Div {
