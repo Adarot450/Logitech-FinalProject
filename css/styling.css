@@ -44,7 +44,7 @@ nav {
 .carousel {
   background-color: black;
   height: 600px;
-  border-bottom: white 10px solid;
+  border-bottom: white 1px solid;
 }
 
 .carousel-img {
