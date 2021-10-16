@@ -12,6 +12,9 @@ form.addEventListener("submit", (e) => {
   } else if (Name.value.length <= 2) {
     alert("Name must be larger than or equal to 3 charecters");
     e.preventDefault();
+  } else if (email.value.length >= 31) {
+    alert("Email must be smaller than or equal to 30 charecters");
+    e.preventDefault();
   } else if (emailValue.includes("@") == false) {
     alert("Email is incorrect");
     e.preventDefault();
@@ -19,7 +22,7 @@ form.addEventListener("submit", (e) => {
     alert("Email is incorrect");
     e.preventDefault();
   } else if (textarea.value.length >= 300) {
-    alert("Text must be smaller than 300 charecters");
+    alert("Message must be smaller than 300 charecters");
     e.preventDefault();
   }
 });
